@@ -1,0 +1,31 @@
+<nav class=" fixed-top bg-white shadow-sm shadow">
+  <div class="container py-0 px-lg-5">
+    <div class="categories d-flex align-items-center ">
+      <div class="logo me-4">
+        <img src="../../assets/logo.svg" alt="">
+      </div>
+      <div class="drob-down d-none flex-grow-1 justify-content-end">
+        <button class="btn bg-main px-2 py-1 d-flex justify-content-center align-items-center"><i class="fa-solid fa-bars text-white fs-4"></i></button>
+      </div>
+      <ul class=" nav navbar routers gap-3 py-0" *ngIf="isLoggedIn">
+        <li class=" curser-poiner nav-item position-relative p-3" routerLink="home" routerLinkActive="bar"><span class="topBar "></span><a class=" w-100 h-100 d-block text-color text-decoration-none">Home</a><span class="bottomBar "></span></li>
+        <li class=" curser-poiner nav-item position-relative p-3" routerLink="cart" routerLinkActive="bar"><span class="topBar "></span><a class=" w-100 h-100 d-block text-color text-decoration-none">Cart</a><span class="bottomBar "></span></li>
+        <li class=" curser-poiner nav-item position-relative p-3" routerLink="products" routerLinkActive="bar"><span class="topBar "></span><a class=" w-100 h-100 d-block text-color text-decoration-none">Products</a><span class="bottomBar "></span></li>
+        <li class=" curser-poiner nav-item position-relative p-3" routerLink="categories" routerLinkActive="bar"><span class="topBar "></span><a class=" w-100 h-100 d-block text-color text-decoration-none">Categoris</a><span class="bottomBar "></span></li>
+        <li class=" curser-poiner nav-item position-relative p-3" routerLink="brands" routerLinkActive="bar"><span class="topBar "></span><a class=" w-100 h-100 d-block text-color text-decoration-none">Brands</a><span class="bottomBar "></span></li>
+      </ul>
+      <ul class="nav navbar flex-grow-1 justify-content-end gap-3" >
+        <ul class=" nav navbar gap-2 justify-content-end">
+          <li class=" curser-poiner nav-item"><i class="fa-brands fa-instagram"></i></li>
+          <li class=" curser-poiner nav-item"><i class="fa-brands fa-facebook"></i></li>
+          <li class=" curser-poiner nav-item"><i class="fa-brands fa-twitter"></i></li>
+          <li class=" curser-poiner nav-item"><i class="fa-brands fa-linkedin-in"></i></li>
+          <li class=" curser-poiner nav-item"><i class="fa-brands fa-twitter"></i></li>
+        </ul>
+        <li class=" curser-poiner nav-item " routerLink="login" *ngIf="!isLoggedIn"><a>Log-in</a></li>
+        <li class=" curser-poiner nav-item " routerLink="signup" *ngIf="!isLoggedIn"><a>Sign-up</a></li>
+        <li class=" curser-poiner nav-item " routerLink="login" (click)="logOut()" *ngIf="isLoggedIn"><a>Log-out</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>

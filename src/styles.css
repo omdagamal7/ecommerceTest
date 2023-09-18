@@ -1,1 +1,12 @@
-/* You can add global styles to this file, and also import other style files */
+.text-main {
+  color: #298fef !important;
+}
+.bg-main {
+  background-color: #298fef !important;
+}
+.curser-poiner {
+  cursor: pointer;
+}
+.container {
+  padding-top: 72px;
+}

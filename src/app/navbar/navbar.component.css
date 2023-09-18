@@ -1,0 +1,33 @@
+
+img {
+  width: 10rem;
+}
+.topBar {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: 3px;
+  width: 0%;
+  background: #298fef;
+  transition: all .3s;
+}
+ .bottomBar {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 3px;
+  width: 0%;
+  background: #298fef;
+  transition: all .3s;
+}
+.routers li:hover .topBar {
+  width: 100%;
+}
+.routers li:hover .bottomBar {
+  width: 100%;
+}
+.bar span {
+  width: 100%;
+}

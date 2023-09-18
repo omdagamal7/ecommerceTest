@@ -1,0 +1,10 @@
+@media (768px <= width <= 991px) {
+  .w-md-70 {
+    width: 70% !important;
+  }
+}
+@media (992px <= width) {
+  .w-lg-50 {
+    width: 50% !important;
+  }
+}
