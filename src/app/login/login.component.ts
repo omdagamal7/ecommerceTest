@@ -31,7 +31,9 @@ export class LoginComponent {
             this._authService.getUserData();
           },
           error: err =>  {
-          this.isInvalid = err},
+          this.isInvalid = err
+            this.loader = false;
+        },
           complete: () => {
             this._router.navigate(['/home']);
             console.log('done');

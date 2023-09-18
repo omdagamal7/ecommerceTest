@@ -34,7 +34,7 @@
         <input type="password" formControlName="rePassword" name="rePassword" placeholder="rePassword" id="rePassword" class=" form-control mb-2">
         <div class="alert alert-danger py-2 px-3" *ngIf="registerForm.get('rePassword')?.errors && (registerForm.get('rePassword')?.touched || isInvalid)">
           <p class="m-0" *ngIf="registerForm.get('rePassword')?.getError('required')">Your confirm password is required</p>
-          <p class="m-0" *ngIf="registerForm.get('rePassword')?.getError('pattern')">Dosen't match the password</p>
+          <p class="m-0" *ngIf="registerForm.get('rePassword')?.getError('passMatch')">Dosen't match the password</p>
         </div>
       </div>
       <div class="form-group mb-4">
@@ -46,7 +46,7 @@
           <p class="m-0" *ngIf="registerForm.get('phone')?.getError('maxlength')">Your phone must be less than 12 numbers</p>
         </div>
       </div>
-      <button class="d-block ms-auto btn btn-primary">
+      <button class="d-block ms-auto btn btn-primary" [disabled]="registerForm.invalid">
         <i *ngIf="loader" class="fa fa-spinner fa-spin"></i>
         <span *ngIf="!loader">Register</span>
       </button>
