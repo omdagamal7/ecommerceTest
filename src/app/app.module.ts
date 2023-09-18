@@ -14,6 +14,8 @@ import { ProductsComponent } from './products/products.component';
 import { CategoriesComponent } from './categories/categories.component';
 import { BrandsComponent } from './brands/brands.component';
 import { NotFoundComponent } from './not-found/not-found.component';
+import { ProductComponent } from './product/product.component';
+import { ProductItemComponent } from './product-item/product-item.component';
 
 
 @NgModule({
@@ -27,7 +29,9 @@ import { NotFoundComponent } from './not-found/not-found.component';
     ProductsComponent,
     CategoriesComponent,
     BrandsComponent,
-    NotFoundComponent
+    NotFoundComponent,
+    ProductComponent,
+    ProductItemComponent
   ],
   imports: [
     BrowserModule,

@@ -1,6 +1,6 @@
 export interface Product {
   sold: string;
-  images: string[];
+  imageCover: string;
   title: string;
   price: number;
   category: category;
