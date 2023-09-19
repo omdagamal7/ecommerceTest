@@ -46,7 +46,7 @@
           <p class="m-0" *ngIf="registerForm.get('phone')?.getError('maxlength')">Your phone must be less than 12 numbers</p>
         </div>
       </div>
-      <button class="d-block ms-auto btn btn-primary" [disabled]="registerForm.invalid">
+      <button class="d-block ms-auto btn btn-primary">
         <i *ngIf="loader" class="fa fa-spinner fa-spin"></i>
         <span *ngIf="!loader">Register</span>
       </button>
