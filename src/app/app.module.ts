@@ -16,6 +16,13 @@ import { BrandsComponent } from './brands/brands.component';
 import { NotFoundComponent } from './not-found/not-found.component';
 import { ProductComponent } from './product/product.component';
 import { ProductItemComponent } from './product-item/product-item.component';
+import { CarouselModule } from 'ngx-owl-carousel-o';
+import { CarouselHolderComponent } from './slider/slider.component';
+import { SliderWrapperComponent } from './slider-wrapper/slider-wrapper.component';
+import { RouterModule } from '@angular/router';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { ProductDetailsComponent } from './product-details/product-details.component';
+import { FooterComponent } from './footer/footer.component';
 
 
 @NgModule({
@@ -25,19 +32,26 @@ import { ProductItemComponent } from './product-item/product-item.component';
     RegisterComponent,
     LoginComponent,
     HomeComponent,
-    CartComponent,
     ProductsComponent,
     CategoriesComponent,
     BrandsComponent,
     NotFoundComponent,
     ProductComponent,
-    ProductItemComponent
+    ProductItemComponent,
+    CarouselHolderComponent,
+    SliderWrapperComponent,
+    ProductDetailsComponent,
+    FooterComponent
+    
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     ReactiveFormsModule,
-    HttpClientModule
+    HttpClientModule,
+    CarouselModule,
+    RouterModule,
+    BrowserAnimationsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

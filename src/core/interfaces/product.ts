@@ -1,12 +1,22 @@
 export interface Product {
-  sold: string;
+  id: string;
   imageCover: string;
   title: string;
   price: number;
-  category: category;
   ratingsAverage: number;
+  brand: Brand;
+  category: Category;
+  description: string;
+  images: string[];
 }
 
-interface category {
+interface Subcategory {
+  name: string;
+}
+interface Brand {
+  name: string;
+  image: string;
+}
+interface Category {
   name: string;
 }
