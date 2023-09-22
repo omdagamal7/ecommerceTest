@@ -11,4 +11,7 @@ export class ProductsService {
   getProducts () :Observable<any> {
     return this._httpclient.get(`https://ecommerce.routemisr.com/api/v1/products`)
   }
+  getProductDetails (id: string) :Observable<any> {
+    return this._httpclient.get(`https://ecommerce.routemisr.com/api/v1/products/${id}`)
+  }
 }

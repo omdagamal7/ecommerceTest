@@ -1,0 +1,28 @@
+#email {
+  border: 0;
+  outline-color: #298fef;
+}
+
+input {
+  caret-color: #298fef;
+}
+form {
+  padding-bottom: 30px;
+  border-bottom: 1px solid #ccc;
+}
+.img {
+  width: 3.75rem;
+}
+.storesImg {
+  width: 50%;
+}
+@media (width <= 12.5rem) {
+  .img {
+    width: 50%;
+  }
+
+  
+}
+.payment {
+  border-bottom: 1px solid #ccc;
+}

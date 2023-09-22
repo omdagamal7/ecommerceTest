@@ -31,3 +31,76 @@ img {
 .bar span {
   width: 100%;
 }
+
+@media (1060px <= width) {
+.drop-down {
+  display: none !important;
+}
+.navigation {
+  display: flex;
+}
+}
+@media (width <= 1060px) {
+.navigation {
+  display: block;
+  position: absolute;
+  width: 95%;
+  top: 200%;
+  visibility: hidden;
+  opacity: 0;
+  right: 2.5%;
+  left: 2.5%;
+  transition: all .3s;
+  background-color: white;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+  border: #298fef solid 1px;
+  border-top: none;
+  padding-bottom: 10px;
+}
+.visible {
+  visibility: visible;
+}
+.opacity {
+  opacity: 1;
+}
+.top {
+  top: 100%;
+}
+.navigation .routers {
+  display: block;
+  width: 100% !important;
+  text-align: center;
+  padding: 20px 0;
+}
+.navigation .routers > li {
+  margin: 10px 0;
+}
+.navigation .signing  {
+  display: flex;
+  justify-content: space-between !important;
+  align-items: center;
+  padding: 0 20px;
+  flex-grow: 0 !important;
+}
+
+nav > div {
+  padding-top: 10px !important;
+  padding-bottom: 10px !important;
+}
+}
+.drop-down button:hover {
+  color: #298fef !important;
+  border: 1px solid #298fef;
+  background-color: white !important;
+  outline: #298fef;
+}
+.drop-down button i {
+  transition: all .4s;
+}
+.drop-down button:hover i {
+  color: #298fef !important;
+}
+
+
+

@@ -4,9 +4,23 @@
 .bg-main {
   background-color: #298fef !important;
 }
+
 .curser-poiner {
   cursor: pointer;
 }
-.container {
+.container-fluid {
   padding-top: 72px;
+  padding-bottom: 72px;
+}
+@media (768px <= width) {
+  .container-fluid-padding {
+    padding-left: 100px  !important;
+    padding-right: 100px !important;
+  }
+}
+.bg-light-cus {
+  background-color: #eee;
+}
+.text-gold {
+  color: gold;
 }

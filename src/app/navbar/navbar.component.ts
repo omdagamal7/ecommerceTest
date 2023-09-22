@@ -7,6 +7,7 @@ import { AuthService } from 'src/core/services/auth.service';
   styleUrls: ['./navbar.component.css']
 })
 export class NavbarComponent {
+  navToggle: boolean = false;
   isLoggedIn: boolean = false;
   constructor ( private _authService: AuthService ) {
     this._authService.userData.subscribe(() => {
@@ -16,6 +17,10 @@ export class NavbarComponent {
         this.isLoggedIn = false;
       }
     })
+  }
+  dropDownNav() {
+    this.navToggle = !this.navToggle
+
   }
   logOut() {
     this._authService.logout();

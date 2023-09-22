@@ -1,1 +1,32 @@
-<p>cart works!</p>
+<div class="container-fluid container-fluid-padding">
+<div class="container p-0 bg-light-cus rounded-4 overflow-hidden" *ngIf="apiData?.data">
+  <h2 class="bg-main m-0 text-white text-center py-3">Cart Details</h2>
+  <div class="p-4 pb-0">
+    <div class="row gy-3 mb-5">
+      <h4 class="col-lg-5 rounded-pill text-center text-white bg-main py-2 px-5 top-0 start-0 fw-normal">Number Of products: <span>{{apiData.numOfCartItems}}</span></h4>
+      <h4 class=" col-lg-5 offset-lg-2 rounded-pill  text-center text-white bg-main py-2 px-5 top-0 end-0 fw-normal">Total Price: <span>{{apiData.data.totalCartPrice}}</span></h4>
+    </div>
+    <div class="row mb-3 p-3 bg-white rounded-4" *ngFor="let product of apiData.data.products | filterProduct">
+      <div class="order-sm-1 order-md-0 col-sm-8 col-md-3 col-lg-1">
+        <img [src]="product.product.imageCover" alt="" class="w-100">
+      </div>
+      <div class="order-sm-3 order-md-0 col-sm-12 col-md-6 col-lg-9">
+        <h4>{{product.product.title}}</h4>
+        <h6 class="text-main">{{product.product.category.name}}</h6>
+        <div class="d-flex justify-content-between align-products-center fw-semibold">
+          <p class="mb-0">{{product.price | currency : 'EGP '}}</p>
+          <p class="mb-0"><i class="fa-solid fa-star text-gold"></i> {{product.product.ratingsAverage}}</p>
+        </div>
+        <button class="btn bg-transparent text-danger px-0" (click)="deleteProduct(product.product.id)"><i class="fa-regular fa-trash-can"></i> Remove</button>
+      </div>
+      <div class="order-sm-2 m-0 px-4 order-md-0 col-sm-4 col-md-3 offset-md-1 col-lg-2 offset-lg-1 text-center  d-flex align-products-center">
+        <div class="d-flex justify-content-between flex-grow-1 w-75 mx-auto align-items-center">
+            <button (click)="updateProductCount( product.count + 1, product.product.id)" class="text-white h6 bg-main rounded-start p-1 btn m-0"><i class="fa-solid fa-plus"></i></button>
+            <div class="text-main fs-4">{{product.count}}</div>
+            <button (click)="updateProductCount(product.count - 1, product.product.id)" class="text-white h6 bg-main rounded-end p-1 btn m-0"><i class="fa-solid fa-minus"></i></button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+</div>
